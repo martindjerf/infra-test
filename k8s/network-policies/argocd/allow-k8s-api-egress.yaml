@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-k8s-api-egress
+  namespace: argocd
+spec:
+  podSelector: {}
+  policyTypes:
+    - Egress
+  egress:
+    # - to: 
+    #   - ipBlock:
+    #       cidr: 74.220.23.49/32
+      ports:
+        - protocol: TCP
+          port: 6443

@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-intra-namespace
+  namespace: argocd
+spec:
+  # targets all pods in this namespace — who this policy governs
+  podSelector: {}
+  policyTypes:
+    - Egress
+    - Ingress
+  ingress:
+    - from:
+      # allows ingress from all pods within this namespace only
+      - podSelector: {}
+  egress:
+    - to:
+      # allows egress to all pods within this namespace only
+      - podSelector: {}

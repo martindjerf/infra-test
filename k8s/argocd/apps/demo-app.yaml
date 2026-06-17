@@ -1,2 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
+metadata:
+  name: demo-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/martindjerf/infra-test
+    targetRevision: main
+    path: k8s/charts/demo-app
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: apps
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=false

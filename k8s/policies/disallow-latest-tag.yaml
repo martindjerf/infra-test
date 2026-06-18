@@ -18,6 +18,7 @@ spec:
                 - kube-system
                 - kyverno
                 - argocd
+                - ingress-nginx
       validate:
         message: "Image tag must be specified and cannot be 'latest'."
         pattern:
@@ -37,6 +38,7 @@ spec:
                 - kube-system
                 - kyverno
                 - argocd
+                - ingress-nginx
       validate:
         message: "Image tag 'latest' is not allowed."
         pattern:

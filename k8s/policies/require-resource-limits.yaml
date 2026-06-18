@@ -18,6 +18,7 @@ spec:
                 - kube-system
                 - kyverno
                 - argocd
+                - ingress-nginx
       validate:
         message: "CPU and memory limits are required for all containers."
         pattern:

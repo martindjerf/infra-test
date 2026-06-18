@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/martindjerf/infra-test
     targetRevision: main
-    path: k8s/policies/
+    path: k8s/policies
   destination:
     server: https://kubernetes.default.svc
     namespace: kyverno

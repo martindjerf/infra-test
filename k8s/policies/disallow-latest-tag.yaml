@@ -19,6 +19,7 @@ spec:
                 - kyverno
                 - argocd
                 - ingress-nginx
+                - falco
       validate:
         message: "Image tag must be specified and cannot be 'latest'."
         pattern:
@@ -39,6 +40,7 @@ spec:
                 - kyverno
                 - argocd
                 - ingress-nginx
+                - falco
       validate:
         message: "Image tag 'latest' is not allowed."
         pattern:

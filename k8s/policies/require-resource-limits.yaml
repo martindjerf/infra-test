@@ -19,6 +19,7 @@ spec:
                 - kyverno
                 - argocd
                 - ingress-nginx
+                - falco
       validate:
         message: "CPU and memory limits are required for all containers."
         pattern:

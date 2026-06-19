@@ -1,0 +1,21 @@
+api-key: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: namespaces
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/martindjerf/infra-test
+    targetRevision: main
+    path: k8s/charts/namespaces
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: namespaces
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=false
+

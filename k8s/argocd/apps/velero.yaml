@@ -13,7 +13,7 @@ spec:
       values: |
         kubectl:
           image:
-            repository: registry.k8s.io/kubectl
+            repository: docker.io/bitnami/kubectl
             tag: "latest"
         configuration:
           backupStorageLocation:

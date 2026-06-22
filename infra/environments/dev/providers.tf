@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    
+
     organization = "martin-corp"
 
     workspaces {
@@ -10,5 +10,5 @@ terraform {
 }
 
 provider "civo" {
-  region = "LON1" 
+  region = "LON1"
 }

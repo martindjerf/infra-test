@@ -1,12 +1,12 @@
 variable "region" {
   description = "region of infrastructure"
-  type = string
-  default = "LON1"
+  type        = string
+  default     = "LON1"
 }
 
 variable "cluster_name" {
   description = "clustername"
-  type = string
+  type        = string
 }
 
 variable "network_label" {

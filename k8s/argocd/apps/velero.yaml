@@ -23,6 +23,7 @@ spec:
           volumeSnapshotLocation:
             - name: default
               provider: aws
+              config: {}
         initContainers:
           - name: velero-plugin-for-aws
             image: velero/velero-plugin-for-aws:v1.12.0

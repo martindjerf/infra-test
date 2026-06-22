@@ -11,10 +11,7 @@ spec:
     targetRevision: 10.0.4
     helm:
       values: |
-        kubectl:
-          image:
-            repository: docker.io/bitnami/kubectl
-            tag: "1.33"
+        upgradeCRDs: false
         configuration:
           backupStorageLocation:
             - name: default

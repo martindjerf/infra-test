@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: velero-schedule
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/martindjerf/infra-test
+    targetRevision: main
+    path: k8s/velero/
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: velero
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=false

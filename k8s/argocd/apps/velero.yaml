@@ -21,6 +21,7 @@ spec:
                 region: minio
                 s3ForcePathStyle: "true"
                 s3Url: https://objectstore.lon1.civo.com
+                checksumAlgorithm: ""
           volumeSnapshotLocation:
             - name: default
               provider: aws

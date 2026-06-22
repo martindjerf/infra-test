@@ -14,7 +14,7 @@ spec:
         kubectl:
           image:
             repository: registry.k8s.io/kubectl
-            tag: "v1.32.0"
+            tag: "latest"
         configuration:
           backupStorageLocation:
             - name: default
